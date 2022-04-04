@@ -1,0 +1,39 @@
+<!-- <b>Selected Value : {{tempSelectedValue}}</b>
+<br>
+
+<th class="" scope="col" *ngFor="let menu of menuList;">
+      <br>
+      {{menu.filterType}}
+      <div>
+<th class="" scope="col" *ngFor="let subMenu of menu.menuOptions; let last = last">
+      <br>
+      <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" [name]="menu.filterType + subMenu" [id]="menu.filterType + subMenu" [value]="subMenu"
+                  (change)="onSelectionChange(menu.filterType,subMenu)" [checked]="last"> {{subMenu}}
+      </div>
+</th>
+</div>
+</th> -->
+
+<div class="dropdown show p-2" *ngFor="let item of menuList">
+  <a class="btn btn-danger dropdown-toggle  w-100" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{item.filterType}}
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" *ngFor="let subMenu of item.menuOptions">
+    <a class="dropdown-item" href="#">{{subMenu}}</a>
+     <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a> -->
+ </div>
+</div>
+
+
+
+<!-- <ul *ngFor="let item of menuList">
+      <li class="parent"><b>{{item.filterType}}</b></li>
+      <li class="child">
+            <ul *ngFor="let subMenu of item.menuOptions">
+                  <li>{{subMenu}}</li>
+            </ul>
+      </li>
+</ul> -->
